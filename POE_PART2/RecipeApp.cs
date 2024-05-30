@@ -17,6 +17,8 @@ namespace POE_PART2
             bool stay = true;
             while (stay)
             {
+                // Set menu text color to gray
+                Console.ForegroundColor = ConsoleColor.DarkYellow; 
                 Console.WriteLine("Hi, welcome to our storing ingredient app");
                 Console.WriteLine("1. Add a new recipe");
                 Console.WriteLine("2. Display recipes");
@@ -25,6 +27,8 @@ namespace POE_PART2
                 Console.WriteLine("5. Clear recipe data");
                 Console.WriteLine("6. Exit");
 
+                // Reset color to default
+                Console.ResetColor();
                 int choice = int.Parse(Console.ReadLine());
 
                 switch (choice)
@@ -72,7 +76,12 @@ namespace POE_PART2
         // Method to display all recipes
         private void DisplayRecipes()
         {
+            // Set menu text color to gray
+            Console.ForegroundColor = ConsoleColor.Yellow; 
             Console.WriteLine("Recipes:");
+
+            // Reset color to default
+            Console.ResetColor(); 
             foreach (var recipe in recipes.OrderBy(r => r.Name)) // Display recipes in alphabetical order
             {
                 Console.WriteLine(recipe.Name);
@@ -150,7 +159,11 @@ namespace POE_PART2
         // Method to notify if calorie limit is exceeded
         private void NotifyCalorieLimitExceeded(string message)
         {
+            // Set text color to red
+            Console.ForegroundColor = ConsoleColor.Red; 
             Console.WriteLine(message);
+            // Reset color to default
+            Console.ResetColor(); 
         }
     }
 }
