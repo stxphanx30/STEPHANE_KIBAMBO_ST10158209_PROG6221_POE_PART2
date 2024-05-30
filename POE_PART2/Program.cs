@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace POE_PART2
 {
+    /// <summary>
+    /// class program that contains the main method that runs the app
+    /// </summary>
+    /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+    /// 
     class Program
     {
         static void Main(string[] args)
