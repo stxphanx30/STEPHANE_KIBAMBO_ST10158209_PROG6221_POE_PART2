@@ -6,19 +6,30 @@ using System.Threading.Tasks;
 
 namespace POE_PART2
 {
+    /// <summary>
+    /// this class contains the menu that the user will be able to choose from options and has some methods that we will use along the program 
+    /// </summary>
+    /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+    /// 
     class RecipeApp
     {
         private List<Recipe> recipes = new List<Recipe>(); // List to store recipes
         public delegate void CalorieNotification(string message); // Delegate for calorie notification
 
-        // Main application loop
+        /// <summary>
+        /// this is the method run that the program will start and display the menu and calls other methon within the class
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void Run()
         {
             bool stay = true;
             while (stay)
             {
                 // Set menu text color to gray
-                Console.ForegroundColor = ConsoleColor.DarkYellow; 
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                
+                // menu
                 Console.WriteLine("Hi, welcome to our storing ingredient app");
                 Console.WriteLine("1. Add a new recipe");
                 Console.WriteLine("2. Display recipes");
@@ -29,8 +40,9 @@ namespace POE_PART2
 
                 // Reset color to default
                 Console.ResetColor();
+                
+                // switch to get the user input
                 int choice = int.Parse(Console.ReadLine());
-
                 switch (choice)
                 {
                     case 1:
@@ -58,7 +70,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to add a new recipe
+        /// <summary>
+        ///this method will allow us to add a new recipe
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         private void AddNewRecipe()
         {
             Recipe recipe = new Recipe();
@@ -73,7 +89,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to display all recipes
+        /// <summary>
+        /// this method allow us to display the recipes
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         private void DisplayRecipes()
         {
             // Set menu text color to gray
