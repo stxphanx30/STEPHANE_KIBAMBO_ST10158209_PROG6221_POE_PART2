@@ -188,7 +188,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to notify if calorie limit is exceeded
+        /// <summary>
+        /// method to notify if the calories has exeeded 300
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         private void NotifyCalorieLimitExceeded(string message)
         {
             // Set text color to red
