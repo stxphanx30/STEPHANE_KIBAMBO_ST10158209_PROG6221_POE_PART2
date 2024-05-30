@@ -112,7 +112,12 @@ namespace POE_PART2
             return Ingredients.Sum(ingredient => ingredient.Calories + ingredient.Quantity);
         }
 
-        // Method to scale the recipe quantities
+
+        /// <summary>
+        /// methot to scale the recipe quantity this is the proceccing method of the scalerecipe method  in the recipeapp.cs file
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void ScaleRecipe(double factor)
         {
             foreach (var ingredient in Ingredients)
@@ -121,7 +126,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to reset the ingredient quantities
+        /// <summary>
+        /// methot to reset the quantity this is the proceccing method of the resetquantity method  in the recipeapp.cs file
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void ResetQuantities()
         {
             foreach (var ingredient in Ingredients)
