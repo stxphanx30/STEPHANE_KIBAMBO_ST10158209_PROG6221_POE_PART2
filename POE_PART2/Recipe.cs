@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace POE_PART2
 {
@@ -15,8 +12,11 @@ namespace POE_PART2
     class Recipe
     {
         public string Name { get; set; }
-        public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>(); // List to store ingredients
-        private List<string> stepDescriptions = new List<string>(); // List to store steps
+        // List to store ingredients
+        public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
+
+        // List to store steps
+        private List<string> stepDescriptions = new List<string>();
 
 
         /// <summary>
@@ -29,8 +29,11 @@ namespace POE_PART2
             Console.WriteLine("Please enter the name of the recipe:");
             Name = Console.ReadLine();
 
-            GetIngredients(); // Get ingredients from user input
-            GetSteps(); // Get steps from user input
+            // Get ingredients from user input
+            GetIngredients();
+
+            // Get steps from user input
+            GetSteps(); 
         }
 
 

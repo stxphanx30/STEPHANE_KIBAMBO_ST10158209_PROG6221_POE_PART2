@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace POE_PART2
 {
@@ -13,8 +11,11 @@ namespace POE_PART2
     /// 
     class RecipeApp
     {
-        private List<Recipe> recipes = new List<Recipe>(); // List to store recipes
-        public delegate void CalorieNotification(string message); // Delegate for calorie notification
+        // List to store recipes
+        private List<Recipe> recipes = new List<Recipe>(); 
+
+        // Delegate for calorie notification
+        public delegate void CalorieNotification(string message); 
 
         /// <summary>
         /// this is the method run that the program will start and display the menu and calls other methon within the class
@@ -78,8 +79,12 @@ namespace POE_PART2
         private void AddNewRecipe()
         {
             Recipe recipe = new Recipe();
-            recipe.GetRecipeDetails(); // Get recipe details from user input
-            recipes.Add(recipe); // Add the new recipe to the list
+
+            // Get recipe details from user input
+            recipe.GetRecipeDetails(); 
+
+            // Add the new recipe to the list
+            recipes.Add(recipe); 
 
             // Notify if total calories exceed 300
             if (recipe.CalculateTotalCalories() > 300)
@@ -101,8 +106,10 @@ namespace POE_PART2
             Console.WriteLine("Recipes:");
 
             // Reset color to default
-            Console.ResetColor(); 
-            foreach (var recipe in recipes.OrderBy(r => r.Name)) // Display recipes in alphabetical order
+            Console.ResetColor();
+
+            // Display recipes in alphabetical order
+            foreach (var recipe in recipes.OrderBy(r => r.Name)) 
             {
                 Console.WriteLine(recipe.Name);
             }
@@ -112,7 +119,8 @@ namespace POE_PART2
             Recipe selectedRecipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
             if (selectedRecipe != null)
             {
-                selectedRecipe.DisplayRecipe(); // Display the selected recipe
+                // Display the selected recipe
+                selectedRecipe.DisplayRecipe(); 
             }
             else
             {
@@ -134,9 +142,13 @@ namespace POE_PART2
             {
                 Console.WriteLine("By how much would you like your quantities to be changed?:");
                 double factor = double.Parse(Console.ReadLine());
-                selectedRecipe.ScaleRecipe(factor); // Scale the recipe quantities
+
+                // Scale the recipe quantities
+                selectedRecipe.ScaleRecipe(factor); 
                 Console.WriteLine("The quantities have been updated. Here are the new quantities:");
-                selectedRecipe.DisplayRecipe(); // Display the scaled recipe
+
+                // Display the scaled recipe
+                selectedRecipe.DisplayRecipe();
             }
             else
             {
@@ -156,9 +168,12 @@ namespace POE_PART2
             Recipe selectedRecipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
             if (selectedRecipe != null)
             {
-                selectedRecipe.ResetQuantities(); // Reset the recipe quantities
+                // Reset the recipe quantities
+                selectedRecipe.ResetQuantities();
                 Console.WriteLine("The quantity values have been reset.");
-                selectedRecipe.DisplayRecipe(); // Display the reset recipe
+
+                // Display the reset recipe
+                selectedRecipe.DisplayRecipe(); 
             }
             else
             {
@@ -178,8 +193,11 @@ namespace POE_PART2
             Recipe selectedRecipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
             if (selectedRecipe != null)
             {
-                selectedRecipe.ClearData(); // Clear the recipe data
-                recipes.Remove(selectedRecipe); // Remove the recipe from the list
+                // Clear the recipe data
+                selectedRecipe.ClearData();
+
+                // Remove the recipe from the list
+                recipes.Remove(selectedRecipe); 
                 Console.WriteLine("The recipe data has been cleared.");
             }
             else
@@ -198,6 +216,7 @@ namespace POE_PART2
             // Set text color to red
             Console.ForegroundColor = ConsoleColor.Red; 
             Console.WriteLine(message);
+
             // Reset color to default
             Console.ResetColor(); 
         }

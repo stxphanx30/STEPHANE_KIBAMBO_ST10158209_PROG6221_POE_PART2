@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace POE_PART2_TEST
+﻿namespace POE_PART2_TEST
 {
     /// <summary>
     /// clone of the Ingredient.cs class in the project for ujnit testing that stores the ingredients

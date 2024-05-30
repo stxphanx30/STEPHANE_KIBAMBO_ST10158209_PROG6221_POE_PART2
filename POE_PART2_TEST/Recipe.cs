@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace POE_PART2_TEST
+﻿namespace POE_PART2_TEST
 {
     /// <summary>
     /// clone of the recipe.cs class in the project for ujnit testing whith only the total calories method to test 
@@ -14,7 +8,9 @@ namespace POE_PART2_TEST
     public class Recipe
     {
         public string Name { get; set; }
-        public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>(); // List to store ingredients
+
+        // List to store ingredients
+        public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>(); 
 
         /// <summary>
         /// methot to test the calculation of the total calory
