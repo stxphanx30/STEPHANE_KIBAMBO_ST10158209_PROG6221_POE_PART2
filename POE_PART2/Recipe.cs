@@ -139,7 +139,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to clear the recipe data
+        /// <summary>
+        /// methot to clear the data
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void ClearData()
         {
             Ingredients.Clear();
