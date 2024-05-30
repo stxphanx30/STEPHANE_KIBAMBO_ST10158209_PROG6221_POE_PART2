@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace POE_PART2_TEST
 {
+
     public class Ingredient
     {
         public string Name { get; }

@@ -140,7 +140,7 @@ namespace POE_PART2
         }
 
         /// <summary>
-        /// methot to clear the data
+        /// methot to clear the data processing method for clear data metho in the recipeapp.cs file
         /// </summary>
         /// /// --------------------------------------------------------------------------------------------------------------------------------------------
         /// 

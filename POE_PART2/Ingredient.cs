@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace POE_PART2
 {
+    /// <summary>
+    /// this class just storing the ingredient details
+    /// </summary>
+    /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+    /// 
     class Ingredient
     {
         public string Name { get; }
@@ -26,7 +31,11 @@ namespace POE_PART2
             originalQuantity = quantity;
         }
 
-        // Method to reset the ingredient quantity
+        /// <summary>
+        /// this method saves the original values of the quantity collection processing method also for reset quantity in recipe.cs and recipeapp.cs files 
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void ResetQuantity()
         {
             Quantity = originalQuantity;

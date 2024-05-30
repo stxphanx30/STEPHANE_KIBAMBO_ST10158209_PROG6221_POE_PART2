@@ -1,9 +1,19 @@
 namespace POE_PART2_TEST
 {
     [TestFixture]
+    /// <summary>
+    /// Unit testing for the project
+    /// </summary>
+    /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+    /// 
     public class RecipeTests
     {
-        [Test]
+        /// <summary>
+        /// methot that test if the total calories calculation works
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        ///
+        [Test]        
         public void CalculateTotalCalories_WhenCalled_ReturnsCorrectTotal()
         {
             // Arrange: Set up the ingredients for the test
