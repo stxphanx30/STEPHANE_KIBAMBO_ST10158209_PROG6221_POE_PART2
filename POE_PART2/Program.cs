@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace POE_PART2
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
+            // Instantiate the RecipeApp class to handle the main logic
+            RecipeApp app = new RecipeApp();
+
+            // Run the main application
+            app.Run(); 
         }
     }
 }
