@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace POE_PART2_TEST
 {
-
+    /// <summary>
+    /// clone of the Ingredient.cs class in the project for ujnit testing that stores the ingredients
+    /// </summary>
+    /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+    ///
     public class Ingredient
     {
         public string Name { get; }
