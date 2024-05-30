@@ -7,13 +7,23 @@ using System.Xml.Linq;
 
 namespace POE_PART2
 {
+    /// <summary>
+    /// in this class is basically the class where most of everything of the project will happpen here proceesing methods to display
+    /// </summary>
+    /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+    /// 
     class Recipe
     {
         public string Name { get; set; }
         public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>(); // List to store ingredients
         private List<string> stepDescriptions = new List<string>(); // List to store steps
 
-        // Method to get recipe details from user input
+
+        /// <summary>
+        /// method to get therecipe detail from the user input
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void GetRecipeDetails()
         {
             Console.WriteLine("Please enter the name of the recipe:");
@@ -23,7 +33,12 @@ namespace POE_PART2
             GetSteps(); // Get steps from user input
         }
 
-        // Method to get ingredients from user input
+
+        /// <summary>
+        /// method to get the ingredients details from the user input
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void GetIngredients()
         {
             Console.WriteLine("Please enter the number of ingredients:");
@@ -47,7 +62,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to get steps from user input
+        /// <summary>
+        /// method to get the step from the user input
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void GetSteps()
         {
             Console.WriteLine("Enter the number of steps:");
@@ -60,7 +79,12 @@ namespace POE_PART2
             }
         }
 
-        // Method to display the recipe
+
+        /// <summary>
+        /// method to display the recipe 
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public void DisplayRecipe()
         {
             Console.WriteLine($"\nRecipe: {Name}");
@@ -77,7 +101,12 @@ namespace POE_PART2
             Console.WriteLine($"\nTotal Calories: {CalculateTotalCalories()}");
         }
 
-        // Method to calculate total calories of the recipe
+
+        /// <summary>
+        /// method to calculate the total calorie of the recipe
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         public double CalculateTotalCalories()
         {
             return Ingredients.Sum(ingredient => ingredient.Calories + ingredient.Quantity);

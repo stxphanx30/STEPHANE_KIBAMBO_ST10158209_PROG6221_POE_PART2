@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace POE_PART2
 {
     /// <summary>
-    /// this class contains the menu that the user will be able to choose from options and has some methods that we will use along the program 
+    /// this class contains the menu and options that the user will be able prompt to insert their choise and has some methods that we will use along the program to allow the user to act
     /// </summary>
     /// /// --------------------------------------------------------------------------------------------------------------------------------------------
     /// 
