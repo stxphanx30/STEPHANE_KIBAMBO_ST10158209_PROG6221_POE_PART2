@@ -120,7 +120,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to scale a recipe
+        /// <summary>
+        /// Method to scale the recipe
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         private void ScaleRecipe()
         {
             Console.WriteLine("Enter the name of the recipe you want to scale:");
@@ -140,7 +144,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to reset recipe quantities
+        /// <summary>
+        /// Method to reset the quantities
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         private void ResetQuantities()
         {
             Console.WriteLine("Enter the name of the recipe you want to reset:");
@@ -158,7 +166,11 @@ namespace POE_PART2
             }
         }
 
-        // Method to clear recipe data
+        /// <summary>
+        /// Method to clear the datas from the collection
+        /// </summary>
+        /// /// --------------------------------------------------------------------------------------------------------------------------------------------
+        /// 
         private void ClearRecipeData()
         {
             Console.WriteLine("Enter the name of the recipe you want to clear:");
